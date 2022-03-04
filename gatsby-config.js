@@ -34,5 +34,17 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+{
+    resolve: "gatsby-source-strapi",
+    options: {
+      apiURL: "https://trabajo-grupal25.herokuapp.com/api",
+      collectionTypes: [
+        // Lista de tipos de contenido que tenemos en Strapi, en singular
+        "articulo"
+      ],
+      queryLimit: 1000,
+    },
+   },
   ],
 }
+
